@@ -4,8 +4,10 @@ import com.epam.model.{Client, Person}
 
 trait FilesRepo {
 
-  def getLinesFromPersonJsonFile:List[Person]
-  def getLinesFromClientXlsFile:List[Client]
-  def getJsonRequestData:(Int,Int,String)
+  def getLinesFromPersonJsonFile: List[Person]
+
+  def getLinesFromClientXlsFile: List[Client]
+
+  def getJsonRequestData: (Int, Int, String)
 
 }
