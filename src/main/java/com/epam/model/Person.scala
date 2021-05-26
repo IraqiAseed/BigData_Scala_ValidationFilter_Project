@@ -1,6 +1,6 @@
 package com.epam.model
 
-case class Person(var age: Double,
+case class Person( age: Double,
                   name: String,
                   gender: String,
                   company: String,
