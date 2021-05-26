@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import org.apache.poi.ss.usermodel.WorkbookFactory
 import org.springframework.beans.factory.annotation.Value
-import org.springframework.context.annotation.{Configuration, PropertySource}
 import org.springframework.stereotype.Component
 
 import java.io.{File, FileInputStream}
@@ -50,7 +49,6 @@ case class FileRepoImpl(@Value("${person_location}") pathPersonFile: String,
   }
 
   override def getJsonRequestData: (Int, Int, String) = {
-
     val req = mapper.readValue(new File(pathRequestFile), new TypeReference[List[Request]]() {})
     (req.head.minAge.toInt, req.head.maxAge.toInt, req.head.prefixName)
   }
