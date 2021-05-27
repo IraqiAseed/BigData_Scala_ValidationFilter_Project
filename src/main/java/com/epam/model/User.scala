@@ -14,4 +14,5 @@ case class User(firstName: String,
                 address: String,
                 company: String) {
 
+
 }

@@ -37,7 +37,7 @@ case class FileRepoImpl(@Value("${person_location}") pathPersonFile: String,
       .map(e => Client(
         firstName = e.getCell(0).toString,
         lastName = e.getCell(1).toString,
-        gender = e.getCell(2).toString,
+        gender = e.getCell(2).toString.toUpperCase,
         age = e.getCell(3).toString.toDouble,
         email = e.getCell(4).toString,
         phone = e.getCell(5).toString,
