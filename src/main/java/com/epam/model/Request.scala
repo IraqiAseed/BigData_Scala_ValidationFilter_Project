@@ -7,4 +7,4 @@ case class Request(@JsonProperty("min_age") minAge: String,
                    gender: String,
                    @JsonProperty("prefix_name") prefixName: String,
                    @JsonProperty("Marital Status") maritalStatus: String,
-                   @JsonProperty("Number of Children") numberOfChildren: String) extends Serializable
+                   @JsonProperty("Number of Children") numberOfChildren: String)

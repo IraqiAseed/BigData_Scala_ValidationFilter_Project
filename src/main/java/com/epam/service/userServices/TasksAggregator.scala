@@ -13,12 +13,10 @@ class TasksAggregator {
   @Autowired
   var filterTasks: util.List[Tasks] = _
 
-  def runAllTasks(users: List[User] ): Unit = {
+  def runAllTasks(users: List[User]): Unit = {
 
     val filtering = filterTasks.asScala
-    println(filtering(0))
-    println(filtering(1))
-    println(filtering(2))
+
     for (i <- filtering.indices)
       println(filtering(i).filterUser(users))
 
