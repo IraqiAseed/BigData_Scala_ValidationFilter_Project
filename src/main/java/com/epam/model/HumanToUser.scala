@@ -16,11 +16,11 @@ object HumanToUser {
         age = person.age,
         email = person.email,
         phone = person.phone,
-        education = "UNKNOWN",
-        occupation = "UNKNOWN",
+        education = "null",
+        occupation = "null",
         salary = 0,
-        maritalStatus = "UNKNOWN",
-        numberOfChildren = 0,
+        maritalStatus = "null",
+        numberOfChildren = None,
         address = person.address,
         company = person.company))
   }
@@ -38,9 +38,9 @@ object HumanToUser {
         occupation = client.occupation,
         salary = client.salary,
         maritalStatus = client.maritalStatus,
-        numberOfChildren = client.numberOfChildren,
-        address = "UNKNOWN",
-        company = "UNKNOWN"))
+        numberOfChildren = Some(client.numberOfChildren),
+        address = "null",
+        company = "null"))
   }
 
 }

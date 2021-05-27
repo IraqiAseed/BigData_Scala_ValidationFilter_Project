@@ -10,9 +10,8 @@ case class User(firstName: String,
                 occupation: String,
                 salary: Double,
                 maritalStatus: String,
-                numberOfChildren: Int,
+                numberOfChildren: Option[Int],
                 address: String,
                 company: String) {
 
-  def printName(): Unit = println(firstName)
 }

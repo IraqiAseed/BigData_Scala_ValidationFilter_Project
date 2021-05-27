@@ -7,11 +7,8 @@ import org.springframework.stereotype.Component
 class EmailValidator extends Validator {
 
 
-  override def validate(users: List[User]): List[User] = {
+  override def validate(users: List[User]): List[User] = users.filter(person => validator(person.email))
 
-    users.filter(person => validator(person.email))
-
-  }
   private def validator(mail: String): Boolean = {
 
     val email = mail.split("@")

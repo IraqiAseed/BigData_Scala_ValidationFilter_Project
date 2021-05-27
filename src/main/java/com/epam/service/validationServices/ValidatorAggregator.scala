@@ -12,17 +12,19 @@ import scala.collection.JavaConverters.asScalaBufferConverter
 class ValidatorAggregator {
 
   @Autowired
-  var validators: util.List[Validator] = _
+  var validatorsList: util.List[Validator] = _
 
-  def validateAll(implicit personsLst: scala.collection.immutable.List[User]): List[User] = {
-    val scalaList = validators.asScala
-    var lst = new scala.collection.mutable.MutableList[User]
+  def validateAll( personsToValidate: scala.collection.immutable.List[User]): List[User] = {
 
-    val numOfValidators = scalaList.size
-    var valid = personsLst
-    for (i <- 0 until numOfValidators) {
-      valid = scalaList(i).validate(valid)
-    }
-    valid
+    val validators = validatorsList.asScala
+    var persons: List[User] = personsToValidate
+
+    for (i <- validators.indices) persons = validators(i).validate(persons)
+
+    persons
   }
+
+
+
+
 }
