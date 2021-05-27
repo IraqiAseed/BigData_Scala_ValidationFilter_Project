@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
 @Component
-class FilterUserByNamePrefix extends Tasks {
+class FilterUserByNamePrefix extends Filtering {
 
   @Autowired
   var files: FilesRepo = _

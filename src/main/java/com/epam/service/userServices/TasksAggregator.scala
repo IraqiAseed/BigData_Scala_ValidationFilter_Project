@@ -11,7 +11,7 @@ import scala.collection.JavaConverters.asScalaBufferConverter
 class TasksAggregator {
 
   @Autowired
-  var filterTasks: util.List[Tasks] = _
+  var filterTasks: util.List[Filtering] = _
 
   def runAllTasks(users: List[User]): Unit = {
 

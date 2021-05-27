@@ -3,7 +3,7 @@ package com.epam.service.userServices
 import com.epam.model.User
 import org.springframework.stereotype.Component
 @Component
-class FilterUserMaleMarriedThreeChildrenPlus extends Tasks {
+class FilterUserMaleMarriedThreeChildrenPlus extends Filtering {
 
   override def filterUser(users: List[User]): List[User] = getAllMarriedMenPlusThreeAndMoreChildren(users)
 
