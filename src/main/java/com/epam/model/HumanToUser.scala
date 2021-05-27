@@ -7,7 +7,7 @@ case class HumanToUser(person: Person)
 
 object HumanToUser {
 
-  implicit def fromListOfPersons(persons: List[Person]): List[User] = {
+  implicit def personsToUsers(persons: List[Person]): List[User] = {
     persons.map(person =>
       User(
         firstName = person.name.split(" ")(0),
@@ -25,7 +25,7 @@ object HumanToUser {
         company = person.company))
   }
 
-  implicit def fromListOfClients(clients: List[Client]): List[User] = {
+  implicit def clientsToUsers(clients: List[Client]): List[User] = {
     clients.map(client =>
       User(
         firstName = client.firstName,
