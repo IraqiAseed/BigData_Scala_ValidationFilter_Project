@@ -19,7 +19,7 @@ object Manager {
 
   def run(): Unit = {
     val users = validateFiles();
-    printfilteredUsers(users)
+    printFilteredUsers(users)
 
   }
 
@@ -29,7 +29,7 @@ object Manager {
     List.concat(clients, persons)
   }
 
-  def printfilteredUsers(users: List[User]): Unit = {
+  def printFilteredUsers(users: List[User]): Unit = {
     context.getBean(classOf[TasksAggregator]).runAllTasks(users)
   }
 }
