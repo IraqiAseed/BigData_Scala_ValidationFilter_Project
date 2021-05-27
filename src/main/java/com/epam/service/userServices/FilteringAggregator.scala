@@ -8,7 +8,7 @@ import java.util
 import scala.collection.JavaConverters.asScalaBufferConverter
 
 @Component
-class TasksAggregator {
+class FilteringAggregator {
 
   @Autowired
   var filterTasks: util.List[Filtering] = _

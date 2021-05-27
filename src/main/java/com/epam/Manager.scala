@@ -3,7 +3,7 @@ package com.epam
 import com.epam.model.HumanToUser._
 import com.epam.model.User
 import com.epam.repo.FileRepoImpl
-import com.epam.service.userServices.TasksAggregator
+import com.epam.service.userServices.FilteringAggregator
 import com.epam.service.validationServices.ValidatorAggregator
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.{AnnotationConfigApplicationContext, PropertySource}
@@ -30,6 +30,6 @@ object Manager {
   }
 
   def printFilteredUsers(users: List[User]): Unit = {
-    context.getBean(classOf[TasksAggregator]).runAllTasks(users)
+    context.getBean(classOf[FilteringAggregator]).runAllTasks(users)
   }
 }
