@@ -1,7 +1,7 @@
 package com.epam.service.userServices
 
 import com.epam.model.User
-import com.epam.repo.FilesRepo
+import com.epam.repo.{FilesRepo, RequestReader}
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
@@ -9,10 +9,12 @@ import org.springframework.stereotype.Component
 class FilterUserByAgeRange extends Filtering {
 
   @Autowired
-  var files: FilesRepo = _
+  var request:RequestReader =_
+  //var files: FilesRepo = _
+
 
   override def filterUser(users: List[User]): List[User] =
-    getAllUsersWhoseAgeFilteredByRange(users, files.getJsonRequestData._1, files.getJsonRequestData._2)
+    getAllUsersWhoseAgeFilteredByRange(users, request.readRequest._1, request.readRequest._2)
 
 
   private def getAllUsersWhoseAgeFilteredByRange(users: List[User], min: Int, max: Int): List[User] = {

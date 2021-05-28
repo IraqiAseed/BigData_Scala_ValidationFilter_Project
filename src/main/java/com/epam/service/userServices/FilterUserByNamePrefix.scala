@@ -1,7 +1,7 @@
 package com.epam.service.userServices
 
 import com.epam.model.User
-import com.epam.repo.FilesRepo
+import com.epam.repo.{FilesRepo, RequestReader}
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component
 class FilterUserByNamePrefix extends Filtering {
 
   @Autowired
-  var files: FilesRepo = _
+  var request: RequestReader = _
 
   override def filterUser(users: List[User]): List[User] =
-    getAllPeopleWhoseNamesStartWith(users, files.getJsonRequestData._3)
+    getAllPeopleWhoseNamesStartWith(users, request.readRequest._3)
 
 
   private def getAllPeopleWhoseNamesStartWith(users: List[User], prefix: String): List[User] = {

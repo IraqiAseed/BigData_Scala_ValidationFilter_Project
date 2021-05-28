@@ -1,13 +1,10 @@
 package com.epam.repo
 
-import com.epam.model.{Client, Person}
+import com.epam.model.User
+
 
 trait FilesRepo {
 
-  def getLinesFromPersonJsonFile: List[Person]
-
-  def getLinesFromClientXlsFile: List[Client]
-
-  def getJsonRequestData: (Int, Int, String)
+  def readLines: List[User]
 
 }
