@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value
 
 import java.io.{File, FileInputStream}
 import scala.collection.convert.ImplicitConversions.`iterable AsScalaIterable`
-import com.epam.model.HumanToUser._
+import com.epam.model.ClientsToUsers._
 import org.springframework.stereotype.Component
 
 @Component

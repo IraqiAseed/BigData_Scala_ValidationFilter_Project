@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
-import com.epam.model.HumanToUser._
+import com.epam.model.PersonsToUsers._
 
 import java.io.File
 
