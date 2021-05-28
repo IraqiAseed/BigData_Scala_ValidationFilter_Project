@@ -2,6 +2,7 @@ package com.epam.service.userServices
 
 import com.epam.model.User
 import org.springframework.stereotype.Component
+
 @Component
 class FilterUserMaleMarriedThreeChildrenPlus extends Filtering {
 

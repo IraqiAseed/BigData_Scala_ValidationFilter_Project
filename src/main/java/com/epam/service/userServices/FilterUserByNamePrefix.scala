@@ -1,7 +1,7 @@
 package com.epam.service.userServices
 
 import com.epam.model.User
-import com.epam.repo.{FilesRepo, RequestReader}
+import com.epam.repo.RequestReader
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 

@@ -3,7 +3,6 @@ package com.epam.service.validationServices
 import com.epam.model.User
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
-
 import java.util
 import scala.collection.JavaConverters.asScalaBufferConverter
 

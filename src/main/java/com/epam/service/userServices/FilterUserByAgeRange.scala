@@ -10,7 +10,6 @@ class FilterUserByAgeRange extends Filtering {
 
   @Autowired
   var request:RequestReader =_
-  //var files: FilesRepo = _
 
 
   override def filterUser(users: List[User]): List[User] =
