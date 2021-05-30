@@ -2,11 +2,14 @@ package com.epam.model
 
 import scala.language.implicitConversions
 
-case class ClientsToUsers(client: Client)
+case class ClientToUser(client: Client)
 
-object ClientsToUsers {
-  implicit def clientsToUsers(clients: List[Client]): List[User] = {
-    clients.map(client =>
+object ClientToUser {
+
+  implicit def clientsToUsers(clients: List[Client]): List[User] = clients.map(clientToUser)
+
+  implicit def clientToUser(client: Client): User = {
+
       User(
         firstName = client.firstName,
         lastName = client.lastName,
@@ -20,6 +23,6 @@ object ClientsToUsers {
         maritalStatus = client.maritalStatus,
         numberOfChildren = Some(client.numberOfChildren),
         address = "null",
-        company = "null"))
+        company = "null")
   }
 }
