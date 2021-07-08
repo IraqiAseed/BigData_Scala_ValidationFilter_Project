@@ -13,5 +13,3 @@ scala project validation and filtering - spring json xml
 "5": "From the client table, get all married men who have more than 2 children. Search by fields \"Marital Status\", \"Gender\", \"Number of Children\""
 
 
-Good luck.
-If you have questions or something is not clear, please contact
